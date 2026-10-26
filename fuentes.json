@@ -1,0 +1,108 @@
+{
+  "titulo": "Fuentes y análisis de datos económico-financieros",
+  "autores": [
+    "Fernando Úbeda",
+    "Alfonso Santos"
+  ],
+  "institucion": "Universidad Autónoma de Madrid",
+  "carpeta_drive_fuente": "https://drive.google.com/drive/folders/1LFv_kFDRgYVlx-UwU-r6xLpbkRjdCTL7",
+  "repositorio_previsto": "https://github.com/FUbeda70/fuentes-datos-financieros",
+  "materiales": [
+    {
+      "archivo_original": "01_Fuentes_Datos_Econ-Financieros.ipynb",
+      "ruta_repositorio": "01-fuentes-de-datos/01_Fuentes_Datos_Econ-Financieros.ipynb",
+      "drive_id": "1b_tGwk3iML6_are-6k9uYatEj0cFm-ZX",
+      "sha256": "21ff0248fadeba22b3ab43ed398e6c8ab39b6f310533187703438a68c812e64f",
+      "ruta_repositorio_original": "01-fuentes-de-datos/01_Fuentes_Datos_Econ-Financieros_original.ipynb",
+      "sha256_fuente_original": "ac4732ce1dfb1dc60977e9970520ceda9bc1b5d6b0aab72ba1bf7ef0d4d5bdf1",
+      "nota": "Esta versión añade una celda inicial con una referencia al libro Tidy Finance with Python; la copia original se conserva por separado."
+    },
+    {
+      "archivo_original": "Fuentes_Económicas.pdf",
+      "ruta_repositorio": "01-fuentes-de-datos/Fuentes_Economicas.pdf",
+      "drive_id": "1ER3m8v03dNJQIWscZDItQFYQHBwvAiTC",
+      "sha256": "8a3c2ddf48bc6b0c7f13b859c6aa360b07bbb19c164fa6862afbfa5d91a2a4a7"
+    },
+    {
+      "archivo_original": "02_Analisis_datos_macro.ipynb",
+      "ruta_repositorio": "02-analisis-macroeconomico/02_Analisis_datos_macro.ipynb",
+      "drive_id": "1EuZHV6WdMiQg587uGzEppAerXqidairn",
+      "sha256": "42f0b28569858af7c92450465fb6297489f194075045be43752d34e9da50e93c"
+    },
+    {
+      "archivo_original": "Econ_Espa.pdf",
+      "ruta_repositorio": "02-analisis-macroeconomico/Econ_Espa.pdf",
+      "drive_id": "1aHZ_bDSSQwcZZoxuxZxqUCKZkPtuLh1d",
+      "sha256": "95d585c91fd5882be7f9ccf6ca33516aa1a82fb76ef89e8b96ee0db872fcf41c"
+    },
+    {
+      "archivo_original": "03_Análisis_Datos_Contables_MIAX.ipynb",
+      "ruta_repositorio": "03-analisis-contable/03_Analisis_Datos_Contables_MIAX.ipynb",
+      "drive_id": "1A-HSXsxiELiswdWZrJlxbxn-eSpL9fwy",
+      "sha256": "16c1704056bdd4069b6cb65d847accfdbc0099b84e4b50a6a31264305227465e"
+    },
+    {
+      "archivo_original": "04_Efectos_Macro_Contable_Rentabilidad.ipynb",
+      "ruta_repositorio": "04-rentabilidad-acciones/04_Efectos_Macro_Contable_Rentabilidad.ipynb",
+      "drive_id": "1RFeQcMwRLSVJXs3dt1Bt8Wdtc7Z1jk5O",
+      "sha256": "cba9ebcf6c131324101da303f0403a5c1a4bfbb6f5a801f5d1acb235c05eef26"
+    },
+    {
+      "archivo_original": "Welch.pdf",
+      "ruta_repositorio": "04-rentabilidad-acciones/Welch.pdf",
+      "drive_id": "1bc9f_FZ0P_jf5Wmzj1HkeXnyzBDuSS10",
+      "sha256": "73a4090857ddc9812cc70b05a1ef42878f1e44f5fcfd2d83c9bdcf15c1774538"
+    },
+    {
+      "archivo_original": "helper.py",
+      "ruta_repositorio": "04-rentabilidad-acciones/helper.py",
+      "drive_id": "1zdvhH9ppLTvqejEpBr3QA3tj7ZdHNyf-",
+      "sha256": "7b79935c231026bf1e20a84cf75653dc26c5eb6a6ca9c4b87661000252ed0b8c"
+    },
+    {
+      "archivo_original": "GW05_original_monthly.csv",
+      "ruta_repositorio": "04-rentabilidad-acciones/GW05_original_monthly.csv",
+      "drive_id": "1BpOTumJuLf8KWxTYHKwn4-VyTYmFF5IJ",
+      "sha256": "807b97645968c543548f62be295a5f99573c05948f491c1d6a071ca2a7de1159"
+    },
+    {
+      "archivo_original": "GW05_original_annual.csv",
+      "ruta_repositorio": "04-rentabilidad-acciones/GW05_original_annual.csv",
+      "drive_id": "1pgWqRJLCYKNfyu4s_OZAQbW2nNtbNapT",
+      "sha256": "1f61605d84266c9bbf6c6277e522724b750e17c95b80a893bef2971344dcecdb"
+    },
+    {
+      "archivo_original": "Decodificando_el_Valor_Sostenible.pptx",
+      "ruta_repositorio": "05-datos-sostenibilidad/Decodificando_el_Valor_Sostenible.pdf",
+      "drive_id": "1JYDU16hCsYUT-lRJ7m-Cb8_UNZpSKVkq",
+      "sha256": "ac40324692ae46ec098001b42ee3329a17000f100c011dfcf4449585ccdcf915",
+      "url_original": "https://drive.google.com/file/d/1JYDU16hCsYUT-lRJ7m-Cb8_UNZpSKVkq/view",
+      "nota": "Se incluye la versión PDF convertida a partir de la presentación original. Se conserva el PowerPoint editable en Drive.",
+      "sha256_pdf": "982e71518baf8bd294ad65036c75ef6ede1bbcb1e12478d69a1df818a5fade59",
+      "tamano_pdf_bytes": 2778621
+    }
+  ],
+  "nota_colab_tema_4": "El cuaderno original se conserva; el archivo terminado en _colab.ipynb añade una celda inicial para obtener los datos auxiliares desde GitHub.",
+  "atribucion_codigo_tema_4": {
+    "autor": "Julius Doebelt",
+    "github_usuario": "juliusd01",
+    "repositorio_original": "https://github.com/juliusd01/ReplicationGoyalWelch2008",
+    "notebook_original": "GW08_replication.ipynb",
+    "revision": "f773c60197a7daf8c20769716069264894684ad2",
+    "enlace_version_usada": "https://github.com/juliusd01/ReplicationGoyalWelch2008/blob/f773c60197a7daf8c20769716069264894684ad2/GW08_replication.ipynb",
+    "helper_py_identico_al_original": true,
+    "licencia_codigo": "MIT",
+    "archivo_licencia": "04-rentabilidad-acciones/LICENSE-JULIUS-DOEBELT-MIT.txt",
+    "licencia_original": "https://github.com/juliusd01/ReplicationGoyalWelch2008/blob/f773c60197a7daf8c20769716069264894684ad2/LICENSE"
+  },
+  "bibliografia_tema_1": {
+    "referencia": "Scheuch, Christoph; Voigt, Stefan; Weiss, Patrick; Frey, Christoph (2024). Tidy Finance with Python. 1st ed. Chapman & Hall/CRC, Taylor & Francis.",
+    "doi": "10.1201/9781032684307",
+    "url": "https://doi.org/10.1201/9781032684307",
+    "recursos": "https://www.tidy-finance.org/chapters/index.html",
+    "formato_consulta_adicional": "VitalSource Bookshelf",
+    "ruta_notebook_original": "01-fuentes-de-datos/01_Fuentes_Datos_Econ-Financieros_original.ipynb",
+    "sha256_notebook_original": "ac4732ce1dfb1dc60977e9970520ceda9bc1b5d6b0aab72ba1bf7ef0d4d5bdf1",
+    "ruta_notebook_atribuido": "01-fuentes-de-datos/01_Fuentes_Datos_Econ-Financieros.ipynb"
+  }
+}

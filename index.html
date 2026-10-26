@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Curso de fuentes y análisis de datos económico-financieros. Cinco temas con notebooks, lecturas, datos y una presentación sobre sostenibilidad.">
+  <meta name="theme-color" content="#122936">
+  <title>Fuentes y análisis de datos económico-financieros</title>
+  <style>
+    :root { --navy:#122936; --green:#117663; --green-deep:#0b594b; --paper:#f7f6f0; --line:#d9ded8; --muted:#52636b; --white:#fff; --sand:#edece2; --gold:#d3a66b; }
+    * { box-sizing:border-box }
+    html { scroll-behavior:smooth }
+    body { margin:0; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--navy); background:var(--paper); line-height:1.63 }
+    a { color:var(--green-deep); text-underline-offset:4px }
+    a:focus-visible, summary:focus-visible { outline:3px solid #c78919; outline-offset:4px; border-radius:3px }
+    .container { max-width:1140px; margin:0 auto; padding:0 34px }
+    .eyebrow { color:var(--green); letter-spacing:.17em; text-transform:uppercase; font-weight:800; font-size:.75rem }
+    .nav { display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); min-height:88px; gap:30px }
+    .brand { font-weight:800; font-size:1rem; color:var(--navy); text-decoration:none; line-height:1.25; max-width:250px }
+    .brand small { display:block; font-size:.7rem; text-transform:uppercase; letter-spacing:.14em; font-weight:700; color:var(--green); margin-bottom:3px }
+    nav ul { list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:25px; align-items:center }
+    nav a { font-size:.89rem; font-weight:650; text-decoration:none; color:var(--navy) }
+    nav a:hover { color:var(--green) }
+    .hero { display:grid; grid-template-columns:minmax(0,1.6fr) minmax(270px,.65fr); gap:55px; align-items:center; padding:94px 0 84px }
+    h1,h2,.display { font-family:Georgia,"Times New Roman",serif; font-weight:700; letter-spacing:-.042em }
+    h1 { font-size:clamp(2.9rem,5.4vw,5.1rem); line-height:1.08; margin:22px 0 26px }
+    .hero-lead { font-size:1.15rem; color:var(--muted); max-width:720px; margin:0 0 30px }
+    .hero-links { display:flex; align-items:center; gap:22px; flex-wrap:wrap }
+    .btn { display:inline-flex; align-items:center; justify-content:center; background:var(--green); border:2px solid var(--green); color:white; text-decoration:none; padding:12px 20px; border-radius:5px; font-size:.87rem; font-weight:750; transition:background .15s,transform .15s }
+    .btn:hover { background:var(--green-deep); border-color:var(--green-deep); transform:translateY(-1px) }
+    .byline { color:var(--muted); font-size:.88rem; margin-top:27px }
+    .hero-panel { background:var(--navy); color:#fff; border-radius:9px; padding:34px 32px; align-self:stretch; display:flex; flex-direction:column; justify-content:space-between; box-shadow:0 13px 36px rgba(18,41,54,.09) }
+    .hero-panel .eyebrow { color:#81d4ba }
+    .hero-panel h2 { font-size:1.78rem; line-height:1.2; margin:17px 0 15px }
+    .hero-panel p { font-size:.93rem; color:#d4e0e3; margin:0 }
+    .hero-stats { display:grid; grid-template-columns:1fr 1fr; margin-top:32px; border-top:1px solid #48606b; padding-top:22px; gap:20px 16px }
+    .stat strong { display:block; font-family:Georgia,serif; font-size:2.05rem; line-height:1.05 }
+    .stat span { color:#bed1d5; font-size:.77rem }
+    .strip { background:#e8ede6; border-block:1px solid var(--line) }
+    .strip-inner { display:flex; justify-content:space-between; align-items:center; gap:36px; padding:20px 0 }
+    .strip strong { font-size:.95rem }
+    .strip p { margin:0; color:var(--muted); font-size:.9rem; max-width:720px }
+    section { scroll-margin-top:25px }
+    .section-heading { display:flex; gap:22px; align-items:baseline; margin-bottom:7px }
+    .section-heading .eyebrow { white-space:nowrap }
+    .section-heading h2 { font-size:clamp(2rem,3.1vw,2.7rem); line-height:1.2; margin:0 }
+    .section-intro { color:var(--muted); margin:4px 0 31px; max-width:720px }
+    #temario { padding-top:92px }
+    .unit { display:grid; grid-template-columns:105px minmax(0,1fr); gap:29px; border-top:1px solid var(--line); padding:30px 0 34px }
+    .unit:last-of-type { border-bottom:1px solid var(--line) }
+    .unit-num { color:var(--green); font-family:Georgia,serif; font-size:3.9rem; line-height:1; letter-spacing:-.06em }
+    .unit-content h3 { font-size:1.45rem; font-weight:750; line-height:1.32; letter-spacing:-.02em; margin:1px 0 11px }
+    .unit-content p { margin:0 0 20px; color:var(--muted); max-width:750px }
+    .pills { display:flex; gap:7px; flex-wrap:wrap; margin-bottom:14px }
+    .pill { border:1px solid #c8d4cf; border-radius:100px; padding:3px 10px; font-size:.7rem; color:#345955; font-weight:700; letter-spacing:.025em; background:#eff4ef }
+    .links { display:flex; flex-wrap:wrap; gap:10px 12px; align-items:center }
+    .link-main { color:var(--green-deep); font-size:.87rem; font-weight:750; text-decoration:none; border-bottom:2px solid var(--green); padding:6px 0 }
+    .link-main:hover { color:var(--navy) }
+    .link-outline { border:1px solid #c4d3cd; border-radius:4px; padding:8px 12px; background:#fff; color:var(--navy); font-size:.82rem; text-decoration:none; font-weight:600 }
+    .link-outline:hover { background:#e6eee9; border-color:var(--green) }
+    .attribution { margin:16px 0 17px !important; max-width:770px; font-size:.84rem; line-height:1.65; color:var(--muted) }
+    .attribution a { font-weight:650 }
+    .attribution code { font-size:.94em; }
+    .special { border:1px solid #d4dbd4; border-left:4px solid var(--green); margin-top:23px; padding:17px 20px; border-radius:0 6px 6px 0; background:#f0f2eb; font-size:.89rem }
+    .special strong { display:block; margin-bottom:3px }
+    .special p { margin:4px 0 10px }
+    .special ul { margin:6px 0 0; padding-left:20px }
+    .special li { margin:4px 0 }
+    .secondary { padding-top:88px }
+    .howto { display:grid; grid-template-columns:repeat(3,1fr); gap:15px; margin-top:25px }
+    .step { border:1px solid var(--line); border-radius:7px; padding:24px; background:#fffdf8 }
+    .step .step-n { color:var(--green); font-weight:800; font-size:.76rem; letter-spacing:.12em }
+    .step h3 { margin:11px 0 8px; font-size:1.05rem }
+    .step p { margin:0; color:var(--muted); font-size:.89rem }
+    .resources { background:var(--navy); color:white; border-radius:8px; padding:34px; margin:86px 0 0; display:flex; gap:38px; align-items:center; justify-content:space-between }
+    .resources h2 { font-size:1.95rem; margin:4px 0 12px }
+    .resources p { font-size:.9rem; color:#d4e0e3; margin:0; max-width:700px }
+    .resources .btn { border-color:#82c6af; background:transparent; color:#fff; flex:none }
+    .resources .btn:hover { background:#0c594b }
+    footer { border-top:1px solid var(--line); padding:30px 0 48px; margin-top:72px; color:var(--muted); font-size:.8rem }
+    footer a { color:var(--green-deep) }
+    @media (max-width:850px) { .hero { grid-template-columns:1fr; gap:30px; padding:65px 0 } .hero-panel { min-height:230px } .howto { grid-template-columns:1fr } .resources { align-items:flex-start; flex-direction:column; gap:18px } }
+    @media (max-width:570px) { .container { padding:0 20px } .nav { align-items:flex-start; flex-direction:column; justify-content:center; gap:17px; padding:20px 0 } nav ul { gap:16px } .hero { padding:47px 0 49px } h1 { font-size:2.9rem } .hero-panel { padding:25px } .strip-inner { flex-direction:column; gap:5px; align-items:flex-start } #temario { padding-top:62px } .section-heading { display:block } .unit { grid-template-columns:1fr; gap:10px } .unit-num { font-size:2.4rem } .resources { margin-top:62px; padding:25px } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto } .btn { transition:none } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="nav">
+        <a class="brand" href="#inicio" aria-label="Ir al inicio"><small>Curso de finanzas</small>Fuentes &amp; datos financieros</a>
+        <nav aria-label="Navegación principal"><ul>
+          <li><a href="#temario">Temario</a></li>
+          <li><a href="#empezar">Cómo empezar</a></li>
+          <li><a href="#recursos">Recursos</a></li>
+          <li><a href="https://fubeda70.github.io/introduccion-python-finanzas/" target="_blank" rel="noopener">Curso de Python ↗</a></li>
+        </ul></nav>
+      </div>
+      <div class="hero" id="inicio">
+        <div>
+          <div class="eyebrow">Curso · Economía, finanzas y sostenibilidad</div>
+          <h1>De los datos a la evidencia financiera.</h1>
+          <p class="hero-lead">Descubre las principales fuentes de información económico-financiera y aprende a trabajar con datos macroeconómicos, contables, bursátiles y de sostenibilidad mediante ejercicios y lecturas.</p>
+          <div class="hero-links"><a class="btn" href="#temario">Explorar los cinco temas ↓</a><a href="#empezar">Guía de uso</a></div>
+          <p class="byline"><strong>Fernando Úbeda y Alfonso Santos</strong><br>Universidad Autónoma de Madrid</p>
+        </div>
+        <aside class="hero-panel" aria-label="Resumen del curso">
+          <div><div class="eyebrow">Aprendizaje aplicado</div><h2>Datos, métodos y decisiones.</h2><p>Materiales de clase, cuadernos ejecutables en Colab, documentos de apoyo y datos para reproducir los análisis.</p></div>
+          <div class="hero-stats">
+            <div class="stat"><strong>05</strong><span>temas</span></div>
+            <div class="stat"><strong>04</strong><span>cuadernos principales</span></div>
+            <div class="stat"><strong>03</strong><span>lecturas PDF</span></div>
+            <div class="stat"><strong>01</strong><span>presentación ESG</span></div>
+          </div>
+        </aside>
+      </div>
+    </header>
+  </div>
+  <div class="strip"><div class="container strip-inner"><strong>Un itinerario desde las fuentes hasta la interpretación.</strong><p>Los temas 1–4 incluyen notebooks prácticos. El tema 5 se desarrolla a través de una presentación, sin cuaderno de programación.</p></div></div>
+  <main class="container">
+    <section id="temario" aria-labelledby="titulo-temario">
+      <div class="section-heading"><span class="eyebrow">El itinerario</span><h2 id="titulo-temario">Contenido del curso</h2></div>
+      <p class="section-intro">Cinco bloques que combinan localización de información, análisis empírico y reflexión sobre sus implicaciones financieras.</p>
+      <article class="unit" id="tema-1" aria-labelledby="t1">
+        <div class="unit-num">01</div>
+        <div class="unit-content"><div class="pills"><span class="pill">Fuentes</span><span class="pill">Notebook</span><span class="pill">Lectura PDF</span></div>
+          <h3 id="t1">Fuentes de datos económico-financieras</h3>
+          <p>Fuentes públicas y proveedores especializados, series de precios, factores de riesgo y repositorios de información económica y de mercados.</p>
+          <div class="links"><a class="link-main" href="https://colab.research.google.com/github/FUbeda70/fuentes-datos-financieros/blob/main/01-fuentes-de-datos/01_Fuentes_Datos_Econ-Financieros.ipynb" target="_blank" rel="noopener">Abrir en Colab ↗</a><a class="link-outline" href="01-fuentes-de-datos/01_Fuentes_Datos_Econ-Financieros.ipynb" download>Cuaderno .ipynb</a><a class="link-outline" href="01-fuentes-de-datos/Fuentes_Economicas.pdf" target="_blank" rel="noopener">Fuentes Económicas · PDF</a></div>
+          <p class="attribution"><strong>Bibliografía de referencia:</strong> Scheuch, C., Voigt, S., Weiss, P. y Frey, C. (2024). <em>Tidy Finance with Python</em> (1.ª ed.). Chapman &amp; Hall/CRC, Taylor &amp; Francis. <a href="https://doi.org/10.1201/9781032684307" target="_blank" rel="noopener">DOI: 10.1201/9781032684307</a>. Disponible en VitalSource Bookshelf. <a href="01-fuentes-de-datos/README.md">Bibliografía y cuaderno original</a>.</p>
+        </div>
+      </article>
+      <article class="unit" id="tema-2" aria-labelledby="t2">
+        <div class="unit-num">02</div>
+        <div class="unit-content"><div class="pills"><span class="pill">Macroeconomía</span><span class="pill">Notebook</span><span class="pill">Lectura PDF</span></div>
+          <h3 id="t2">Análisis de datos macroeconómicos</h3>
+          <p>Comparación de España y la Unión Europea mediante indicadores, descarga de series y visualización de datos del Banco Mundial y Eurostat.</p>
+          <div class="links"><a class="link-main" href="https://colab.research.google.com/github/FUbeda70/fuentes-datos-financieros/blob/main/02-analisis-macroeconomico/02_Analisis_datos_macro.ipynb" target="_blank" rel="noopener">Abrir en Colab ↗</a><a class="link-outline" href="02-analisis-macroeconomico/02_Analisis_datos_macro.ipynb" download>Cuaderno .ipynb</a><a class="link-outline" href="02-analisis-macroeconomico/Econ_Espa.pdf" target="_blank" rel="noopener">Econ_Espa · PDF</a></div>
+        </div>
+      </article>
+      <article class="unit" id="tema-3" aria-labelledby="t3">
+        <div class="unit-num">03</div>
+        <div class="unit-content"><div class="pills"><span class="pill">Información contable</span><span class="pill">Notebook</span></div>
+          <h3 id="t3">Análisis de datos contables</h3>
+          <p>Extracción de estados financieros y construcción de medidas de rentabilidad económica y financiera, apalancamiento y ratios de mercado.</p>
+          <div class="links"><a class="link-main" href="https://colab.research.google.com/github/FUbeda70/fuentes-datos-financieros/blob/main/03-analisis-contable/03_Analisis_Datos_Contables_MIAX.ipynb" target="_blank" rel="noopener">Abrir en Colab ↗</a><a class="link-outline" href="03-analisis-contable/03_Analisis_Datos_Contables_MIAX.ipynb" download>Cuaderno .ipynb</a></div>
+        </div>
+      </article>
+      <article class="unit" id="tema-4" aria-labelledby="t4">
+        <div class="unit-num">04</div>
+        <div class="unit-content"><div class="pills"><span class="pill">Rentabilidad bursátil</span><span class="pill">Notebook</span><span class="pill">Datos y código auxiliar</span><span class="pill">Lectura PDF</span></div>
+          <h3 id="t4">Determinantes de la rentabilidad de las acciones</h3>
+          <p>Exploración de predictores y métodos de evaluación empírica a partir de las series históricas de Welch y Goyal, con datos anuales y mensuales.</p>
+          <div class="links"><a class="link-main" href="https://colab.research.google.com/github/FUbeda70/fuentes-datos-financieros/blob/main/04-rentabilidad-acciones/04_Efectos_Macro_Contable_Rentabilidad_colab.ipynb" target="_blank" rel="noopener">Abrir versión preparada en Colab ↗</a><a class="link-outline" href="04-rentabilidad-acciones/04_Efectos_Macro_Contable_Rentabilidad.ipynb" download>Cuaderno original</a><a class="link-outline" href="04-rentabilidad-acciones/Welch.pdf" target="_blank" rel="noopener">Welch · PDF</a></div>
+          <p class="attribution"><strong>Créditos del código:</strong> este cuaderno docente se ha elaborado a partir de <a href="https://github.com/juliusd01/ReplicationGoyalWelch2008/blob/f773c60197a7daf8c20769716069264894684ad2/GW08_replication.ipynb" target="_blank" rel="noopener"><code>GW08_replication.ipynb</code></a>, del repositorio <a href="https://github.com/juliusd01/ReplicationGoyalWelch2008" target="_blank" rel="noopener">ReplicationGoyalWelch2008</a>, de <strong>Julius Doebelt</strong> (<code>juliusd01</code>). Se cita la versión exacta utilizada. El módulo <code>helper.py</code> procede de ese mismo proyecto y mantiene su <a href="04-rentabilidad-acciones/LICENSE-JULIUS-DOEBELT-MIT.txt">licencia MIT</a>.</p>
+          <div class="special"><strong>Archivos necesarios para ejecutar el tema 4</strong><p>La versión para Colab descarga automáticamente estos tres archivos. También puedes obtenerlos por separado:</p><div class="links"><a class="link-outline" href="04-rentabilidad-acciones/helper.py" download>helper.py</a><a class="link-outline" href="04-rentabilidad-acciones/GW05_original_monthly.csv" download>GW05 mensual · CSV</a><a class="link-outline" href="04-rentabilidad-acciones/GW05_original_annual.csv" download>GW05 anual · CSV</a><a href="04-rentabilidad-acciones/README.md">Instrucciones completas</a></div></div>
+        </div>
+      </article>
+      <article class="unit" id="tema-5" aria-labelledby="t5">
+        <div class="unit-num">05</div>
+        <div class="unit-content"><div class="pills"><span class="pill">Sostenibilidad</span><span class="pill">Presentación</span><span class="pill">Sin notebook</span></div>
+          <h3 id="t5">Decodificando los datos de sostenibilidad</h3>
+          <p>Lectura crítica de datos e indicadores ESG, evidencia sobre sostenibilidad y rentabilidad, problemas de interpretación y greenwashing.</p>
+          <div class="links"><a class="link-main" href="05-datos-sostenibilidad/Decodificando_el_Valor_Sostenible.pdf" target="_blank" rel="noopener">Ver presentación · PDF ↗</a><a href="https://drive.google.com/file/d/1JYDU16hCsYUT-lRJ7m-Cb8_UNZpSKVkq/view" target="_blank" rel="noopener">PowerPoint original (Drive) ↗</a></div>
+        </div>
+      </article>
+    </section>
+    <section class="secondary" id="empezar" aria-labelledby="titulo-empezar">
+      <div class="section-heading"><span class="eyebrow">Guía de uso</span><h2 id="titulo-empezar">Cómo trabajar con el material</h2></div>
+      <p class="section-intro">Puedes explorar los notebooks directamente desde el navegador o descargarlos para trabajar con Jupyter.</p>
+      <div class="howto">
+        <div class="step"><div class="step-n">PASO 01</div><h3>Elige un tema</h3><p>Consulta el cuaderno y los documentos de apoyo asociados a cada bloque.</p></div>
+        <div class="step"><div class="step-n">PASO 02</div><h3>Abre Google Colab</h3><p>Ejecuta las celdas en orden. Para guardar cambios, conserva una copia en tu Drive.</p></div>
+        <div class="step"><div class="step-n">PASO 03</div><h3>Reproduce el análisis</h3><p>Trabaja con los datos proporcionados. Las APIs externas requieren acceso a Internet.</p></div>
+      </div>
+    </section>
+    <section id="recursos" class="resources" aria-label="Recursos del repositorio">
+      <div><span class="eyebrow" style="color:#80cfb7">Todo el material, organizado</span><h2>Consulta el repositorio completo.</h2><p>Notebooks, lecturas y archivos de datos estructurados por tema, con instrucciones de ejecución y enlaces a las fuentes originales.</p></div>
+      <a class="btn" href="https://github.com/FUbeda70/fuentes-datos-financieros" target="_blank" rel="noopener">Ver en GitHub ↗</a>
+    </section>
+  </main>
+  <div class="container"><footer>
+    <div><strong>Fuentes y análisis de datos económico-financieros</strong> · Fernando Úbeda y Alfonso Santos · Universidad Autónoma de Madrid</div>
+    <div>Algunos ejemplos utilizan servicios externos. Los recursos originales y sus atribuciones están identificados en el <a href="README.md">README</a> y en <a href="fuentes.json">fuentes.json</a>.</div>
+  </footer></div>
+</body>
+</html>

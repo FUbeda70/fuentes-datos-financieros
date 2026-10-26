@@ -8,7 +8,7 @@ Materiales docentes de **Fernando Úbeda y Alfonso Santos** · **Universidad Aut
 
 Este curso trabaja la identificación de fuentes económico-financieras, la extracción y el análisis de datos macroeconómicos y contables, el estudio de los determinantes de la rentabilidad bursátil y la interpretación de datos de sostenibilidad.
 
-Los materiales están organizados en cinco temas. **Los temas 1–4 contienen cuadernos de Python; el tema 5 contiene una presentación y no tiene notebook.**
+Los materiales están organizados en cinco temas. **Los temas 1–4 contienen cuadernos de Python; el tema 5 contiene una presentación y no tiene notebook.** La presentación del tema 5 se incluye en PDF (18 diapositivas, 2,8 MB). La versión editable en PowerPoint permanece en Google Drive.
 
 ## Contenido
 
@@ -18,7 +18,7 @@ Los materiales están organizados en cinco temas. **Los temas 1–4 contienen cu
 | **02 · Análisis de datos macroeconómicos** | [Notebook](02-analisis-macroeconomico/02_Analisis_datos_macro.ipynb) · [Econ_Espa (PDF)](02-analisis-macroeconomico/Econ_Espa.pdf) |
 | **03 · Análisis de datos contables** | [Notebook](03-analisis-contable/03_Analisis_Datos_Contables_MIAX.ipynb) |
 | **04 · Determinantes de la rentabilidad de las acciones** | [Notebook original](04-rentabilidad-acciones/04_Efectos_Macro_Contable_Rentabilidad.ipynb) · [Versión lista para Colab](04-rentabilidad-acciones/04_Efectos_Macro_Contable_Rentabilidad_colab.ipynb) · [Welch (PDF)](04-rentabilidad-acciones/Welch.pdf) |
-| **05 · Decodificando los datos de sostenibilidad** | [Presentación PowerPoint](05-datos-sostenibilidad/Decodificando_el_Valor_Sostenible.pptx) · *Sin notebook* |
+| **05 · Decodificando los datos de sostenibilidad** | [Presentación en PDF](05-datos-sostenibilidad/Decodificando_el_Valor_Sostenible.pdf) · [PowerPoint original (Drive)](https://drive.google.com/file/d/1JYDU16hCsYUT-lRJ7m-Cb8_UNZpSKVkq/view) · *Sin notebook* |
 
 ### Acceso directo a Google Colab
 
@@ -67,9 +67,8 @@ El trabajo académico analizado es **Welch y Goyal (2008)**, *A Comprehensive Lo
 
 Este paquete está preparado para el repositorio público **`FUbeda70/fuentes-datos-financieros`** y la rama `main`. Para ponerlo en línea:
 
-1. Crea en GitHub un repositorio público y vacío con el nombre exacto `fuentes-datos-financieros`, sin generar automáticamente README ni otros archivos.
-2. Sube **el contenido de esta carpeta** a la raíz del repositorio: `index.html`, `README.md`, `fuentes.json`, las cinco carpetas de temas, etc. No subas solo el ZIP.
-3. En **Settings → Pages**, elige **Deploy from a branch → main → /(root)** y guarda.
-4. La web quedará disponible, tras la publicación de GitHub Pages, en [https://fubeda70.github.io/fuentes-datos-financieros/](https://fubeda70.github.io/fuentes-datos-financieros/).
+1. Los archivos del curso están publicados en la rama `main` del repositorio.
+2. En **Settings → Pages**, elige **Deploy from a branch → main → /(root)** y guarda.
+3. La web estará disponible, tras activar GitHub Pages, en [https://fubeda70.github.io/fuentes-datos-financieros/](https://fubeda70.github.io/fuentes-datos-financieros/).
 
 Los enlaces directos a Colab presuponen el nombre del repositorio y la rama indicados. Si se utilizan otros nombres, habrá que actualizar los enlaces en `index.html`, `README.md` y la celda de preparación del notebook 4.

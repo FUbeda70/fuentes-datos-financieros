@@ -1,0 +1,14 @@
+# Librerías empleadas en los cuatro cuadernos.
+# Las fuentes externas (Yahoo Finance, Banco Mundial, Eurostat, FRED, etc.) requieren Internet.
+numpy
+pandas
+matplotlib
+requests
+scipy
+statsmodels
+yfinance
+polars
+tidyfinance
+curl_cffi
+eurostat
+jupyter
